@@ -15,7 +15,7 @@ function App() {
 
   const handleForm = (e)=>{
     e.preventDefault();
-    if(formData.Uname == "admin" && formData.Upass == "123"){
+    if(formData.Uname === "admin" && formData.Upass === "123"){
       localStorage.setItem('login', JSON.stringify(true))
       setIsLoggedIn(localStorage.getItem('login'))      
       setError(null)
@@ -45,11 +45,11 @@ function App() {
       {
         isLoggedin ? (
           <>
-            {/* <h1>Welcome to JSON Posts !!!</h1>
+             <h1>Welcome to JSON Posts !!!</h1>
             <input type='button' value="Logout" onClick={handleLogout} />
-            <Post /> */}
+            <Post /> 
 
-            <Home />
+            {/* <Home /> */}
             
           </>
         ) : (
